@@ -5,4 +5,5 @@ RUN apt-get install -q -y ssh nodejs npm git && apt-get clean
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RNN npm i nodemon node-inspector -g
 RUN adduser --disabled-password --gecos "" dev
+RUN export HOME=home/dev/
 USER dev
